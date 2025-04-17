@@ -1,0 +1,200 @@
+:root {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --accent-color: #cba135;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+  }
+  
+  body.light-mode {
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --accent-color: #002147;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: var(--bg-color);
+    padding: 1rem 0;
+  }
+  
+  /* Common Components */
+  .section-title {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 8px;
+    margin: 2rem 0 1.5rem;
+  }
+  
+  .card {
+    background-color: rgba(203, 161, 53, 0.05);
+    border: 1px solid var(--accent-color);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .social-icons {
+    margin: 1rem 0;
+  }
+  
+  .social-icons a {
+    color: var(--accent-color);
+    margin-right: 15px;
+    font-size: 1.3rem;
+    transition: opacity 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    opacity: 0.8;
+  }
+  
+  /* Timeline Styles (used in About and Achievements) */
+  .timeline {
+    position: relative;
+    padding-left: 1.5rem;
+    list-style: none;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: var(--accent-color);
+  }
+  
+  .timeline-item {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent-color);
+  }
+  
+  .text-accent {
+    color: var(--accent-color);
+  }
+  
+  .research-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: rgba(203, 161, 53, 0.2);
+    border-radius: 20px;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    margin: 0.25rem;
+  }
+  
+  /* Publication Items */
+  .publication-item {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 3px solid var(--accent-color);
+    background-color: rgba(203, 161, 53, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .publication-item:hover {
+    transform: translateY(-3px);
+  }
+  
+  .publication-item h4 {
+    color: var(--accent-color);
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Accordion Styles */
+  .accordion-button {
+    color: var(--text-color);
+    background-color: rgba(203, 161, 53, 0.1);
+  }
+  
+  .accordion-button:not(.collapsed) {
+    color: var(--accent-color);
+    background-color: rgba(203, 161, 53, 0.2);
+  }
+  
+  /* Profile Image */
+  .profile-pic {
+    max-width: 180px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    margin-bottom: 1rem;
+  }
+  
+  /* Light Mode Adjustments */
+  .light-mode .research-tag,
+  .light-mode .publication-item {
+    background-color: rgba(0, 33, 71, 0.1);
+  }
+  
+  .light-mode .accordion-button {
+    background-color: rgba(0, 33, 71, 0.05);
+  }
+  
+  .light-mode .accordion-button:not(.collapsed) {
+    background-color: rgba(0, 33, 71, 0.1);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .profile-pic {
+      max-width: 150px;
+    }
+  
+    .section-title {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Accent Background */
+  .bg-accent {
+    background-color: #ffc107; /* Example accent color */
+    color: #000;
+    padding: 0.2em 0.4em;
+    border-radius: 0.2em;
+    font-size: 0.9em;
+    font-weight: 600;
+  }
+
+  .navbar,
+.navbar .nav-link,
+.navbar-brand {
+  color: var(--text-color) !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--accent-color) !important;
+}
+
+.theme-toggle-btn {
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  background: transparent;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--accent-color);
+  color: #000;
+}
+
