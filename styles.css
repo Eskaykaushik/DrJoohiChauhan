@@ -80,7 +80,44 @@ body.light-mode .accordion-header {
     background-color: rgba(203, 161, 53, 0.05);
     border: 1px solid var(--accent-color);
     transition: transform 0.3s ease;
+    
   }
+
+  #searchInput {
+    background-color: rgba(255, 255, 255, 0.15); /* translucent white */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px); /* frosted glass effect */
+    color: #fff;
+    padding: 0.75rem -1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    width: 80%;
+    margin-top: -3rem;
+  }
+  
+  #searchInput::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  #searchInput:focus {
+    background-color: rgba(255, 255, 255, 0.25);
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.3);
+  }
+  
+
+  body.light-mode #searchInput {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #000;
+  }
+  
+  body.light-mode #searchInput::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  
+
+
+
 
   .accordion-button.collapsed{
     background-color: var(--bg-color);
@@ -99,6 +136,10 @@ body.light-mode .accordion-header {
     border-radius: 10px;  /* Optional: rounds the corners of the image */
     object-fit: cover; 
     padding: 10px;   /* Ensures the image covers the card area */
+  }
+
+  .btn-secondary:hover {
+    background-color: #495057;
   }
   
 
