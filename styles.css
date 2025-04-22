@@ -88,6 +88,19 @@ body.light-mode .accordion-header {
 
   }
 
+  .card-title{
+    color: var(--text-color);
+
+  }
+
+  .card img {
+    width: 100%;          /* Ensures the image fits the card width */
+    height: 200px;         /* Maintains the aspect ratio */
+    border-radius: 10px;  /* Optional: rounds the corners of the image */
+    object-fit: cover;    /* Ensures the image covers the card area */
+  }
+  
+
   .accordion-body .list-group-flush {
     background-color: var(--bg-color);
     color: var(--text-color);
