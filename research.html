@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="light-mode">
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg px-4 sticky-top">
     <div class="container-fluid">
@@ -25,9 +25,10 @@
           <li class="nav-item"><a class="nav-link active text-white" href="research.html">Research</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="teaching.html">Teaching</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="achievements.html">Achievements</a></li>
-          
+          <li class="nav-item"><a class="nav-link" href="courses.html">Suggested Courses</a></li>
+
           <li class="nav-item">
-            <button class="btn btn-outline-light ms-3" id="themeToggle">🌙</button>
+            <button class="btn btn-outline-light ms-3 theme-toggle-btn" id="themeToggle">🌙</button>
           </li>
         </ul>
       </div>
@@ -44,26 +45,99 @@
       <div class="publication-item">
         <h4>"Secure Authentication using dynamic passcodes"</h4>
         <p class="authors">J. Chauhan, et al.</p>
-        <p class="journal"><i class="fas fa-book-open me-2"></i>Patent No. 430469</p>
-        <p class="notes">
-          <span class="badge bg-accent text-dark me-2">Government of India</span>
-          <span class="badge bg-accent text-dark">Filed in Canada</span>
-        </p>
+        <p class="journal"><i class="fas fa-book-open me-2"></i>Patent No. 430469, 2646/DEL/2014, Government of India – The Patent Office, April 28, 2023. Filed in Canada (Application No. 2904646)</p>
       </div>
     </section>
 
-    <!-- Journal Publications -->
+    <!-- Book Chapter -->
+    <section class="mb-5">
+      <h2 class="section-title">Book Chapters</h2>
+      <div class="publication-item">
+        <h4>"Information Technology in Burn Care"</h4>
+        <p class="authors">K. Agrawal, J. Chauhan, Vamseedharan, and P. Goyal</p>
+        <p class="journal"><i class="fas fa-book-open me-2"></i>Textbook of Plastic, Reconstructive, and Aesthetic Surgery, Thieme, vol. 5, pp. 697-714, 2020</p>
+      </div>
+    </section>
+
+    <!-- Journals -->
     <section class="mb-5">
       <h2 class="section-title">Journal Publications</h2>
       <div class="publication-item">
         <h4>"Semi-Path: An interactive semi-supervised learning framework for gigapixel pathology image analysis"</h4>
         <p class="authors">Z. Lai, J. Chauhan, D. Chen, B. N. Dugger, S-C Cheung, and C-N Chuah</p>
-        <p class="journal"><i class="fas fa-book-open me-2"></i>Smart Health, 32: 100474, 2024</p>
+        <p class="journal"><i class="fas fa-book-open me-2"></i>Smart Health, 32: 100474, 2024. (Accepted/Presented in CHASE Conference)</p>
+      </div>
+      <div class="publication-item">
+        <h4>"How cy pres promotes transdisciplinary convergence science: an academic health center for women’s cardiovascular and brain health"</h4>
+        <p class="authors">A. Villablanca, B. N. Dugger, S. Nuthikattu, J. Chauhan, S. Cheung, C-N. Chuah, S. L. Garrison, D. Milenkovic, J. E. Norman, L. C. Oliveira, B. P. Smith, S. D. Brown</p>
+        <p class="journal"><i class="fas fa-book-open me-2"></i>Journal of Clinical and Translational Science, 8, 2024</p>
+      </div>
+      <div class="publication-item">
+        <h4>"EffViT-COVID - A Dual-path Network for COVID-19 Percentage Estimation"</h4>
+        <p class="authors">J. Chauhan and J. Bedi</p>
+        <p class="journal"><i class="fas fa-book-open me-2"></i>Expert Systems with Applications, 213-PartB, 2023. (H-Index: 249)</p>
+      </div>
+      <div class="publication-item">
+        <h4>"IPCRF: An End-to-end Indian Paper Currency Recognition Framework for Blind and Visually Impaired People"</h4>
+        <p class="authors">M. Singh, J. Chauhan, M. Suhaib, S. Verma, and P. Goyal</p>
+        <p class="journal"><i class="fas fa-book-open me-2"></i>IEEE Access, 10, 2022. (H-Index: 204)</p>
+      </div>
+      <div class="publication-item">
+        <h4>"Convolution Neural Network for Effective Burn Region Segmentation of Color Images"</h4>
+        <p class="authors">J. Chauhan and P. Goyal</p>
+        <p class="journal"><i class="fas fa-book-open me-2"></i>Burns, 47(4): 854-862, 2021. (H-Index: 113)</p>
+      </div>
+      <div class="publication-item">
+        <h4>"BPBSAM: Body Part specific Burn Severity Assessment Model using Deep Convolutional Neural Network"</h4>
+        <p class="authors">J. Chauhan and P. Goyal</p>
+        <p class="journal"><i class="fas fa-book-open me-2"></i>Burns, 46(6):1407-23, 2020. (H-Index: 113)</p>
+      </div>
+    </section>
+
+    <!-- Conference Proceedings -->
+    <section class="mb-5">
+      <h2 class="section-title">Conference Proceedings</h2>
+      <div class="publication-item">
+        <h4>"Bridging the Pathology Domain Gap: Efficiently Adapting CLIP for Pathology Image Analysis with Limited Labeled Data"</h4>
+        <p class="authors">Z. Lai, J. Chauhan, B. N. Dugger, C-N. Chuah</p>
+        <p class="journal"><i class="fas fa-book-open me-2"></i>European Conference on Computer Vision (ECCV), Oct 2024. (Core A*, H5-index: 238) Acceptance rate: 27.9%</p>
+      </div>
+      <div class="publication-item">
+        <h4>"BuRnSNet: Burn Region Segmentation Network from Color Images with Two-Way CNN"</h4>
+        <p class="authors">J. Chauhan, P. L. Rosin, P. Goyal</p>
+        <p class="journal"><i class="fas fa-book-open me-2"></i>IEEE International Conference on Image Processing (ICIP), Sep. 2024. (Qualis A, Core B)</p>
+      </div>
+      <div class="publication-item">
+        <h4>"PG-YOLO: Programmable Gradient YOLO and Benchmark for Prohibited Item Detection in X-ray Security Inspection"</h4>
+        <p class="authors">A. Patel, A. Maurya, Alaukik, J. Chauhan</p>
+        <p class="journal"><i class="fas fa-book-open me-2"></i>CVIP, Dec. 2024</p>
+      </div>
+      <div class="publication-item">
+        <h4>"CLIPath: Fine-tune CLIP with Visual Feature Fusion for Pathology Image Analysis Towards Minimizing Data Collection Efforts"</h4>
+        <p class="authors">Z. Lai, LC Oliveira, J. Chauhan, BN. Dugger, C-N. Chuah</p>
+        <p class="journal"><i class="fas fa-book-open me-2"></i>Workshop on Computer Vision for Automated Medical Diagnosis at International Conference on Computer Vision (ICCV), Paris, Oct 2023. (Core A*)</p>
+      </div>
+      <div class="publication-item">
+        <h4>"A Multi-path CNN for Automated Skin Lesion Segmentation"</h4>
+        <p class="authors">J. Chauhan and P. Goyal</p>
+        <p class="journal"><i class="fas fa-book-open me-2"></i>International Joint Conference on Neural Networks (IJCNN), China, July 2021</p>
+      </div>
+      <div class="publication-item">
+        <h4>"Deep Learning-based Fully Automatic Efficient Burn Severity Estimators for Better Burn Diagnosis"</h4>
+        <p class="authors">J. Chauhan and P. Goyal</p>
+        <p class="journal"><i class="fas fa-book-open me-2"></i>International Joint Conference on Neural Networks (IJCNN), Glasgow, UK, July 2020. (Core A)</p>
+      </div>
+      <div class="publication-item">
+        <h4>"Using Deep Learning to Classify Burnt Body Part Images for Better Burn Diagnosis"</h4>
+        <p class="authors">J. Chauhan, R. Goswami, and P. Goyal</p>
+        <p class="journal"><i class="fas fa-book-open me-2"></i>In Proc. Processing and Analysis of Biomedical Information, SaMBa MICCAI, Granada, Spain, Sep 2018. (Core A)</p>
       </div>
     </section>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
+    <script src="script.js"></script>
+
+    </body>
+    </html>
+

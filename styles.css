@@ -10,6 +10,11 @@
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
   }
+
+  /* Text-muted class for dark mode */
+body .text-muted {
+  color: #b0b0b0; /* Lighter gray for dark mode */
+}
   
   body.light-mode {
     --bg-color: #f9f9f9;
@@ -20,7 +25,7 @@
   /* Navbar */
   .navbar {
     background-color: var(--bg-color);
-    padding: 1rem 0;
+
   }
   
   /* Common Components */
@@ -30,12 +35,71 @@
     padding-bottom: 8px;
     margin: 2rem 0 1.5rem;
   }
+  .accordion-item {
+    background-color: var(--bg-color); /* Use the background color for dark mode or light mode */
+    border: 1px solid var(--accent-color); /* Accent color for borders */
+    border-radius: 5px; /* Rounded corners for a cleaner look */
+    margin-bottom: 1rem; /* Space between accordion items */
+    transition: background-color 0.3s ease, border 0.3s ease; /* Smooth transition for background and border */
+  }
+  body .accordion-item {
+    background-color: var(--bg-color); /* Ensure dark background */
+    border: 1px solid rgba(203, 161, 53, 0.2); /* Light border for better contrast in dark mode */
+  }
+  
+  /* Light Mode — Accordion Item */
+  body.light-mode .accordion-item {
+    background-color: #fff; /* White background for light mode */
+    border: 1px solid rgba(0, 33, 71, 0.2); /* Darker border for better contrast in light mode */
+  }
+
+  .accordion-header {
+    background-color: var(--bg-color); /* Background color for dark or light mode */
+    color: var(--text-color); /* Text color based on the theme */
+    
+    border-radius: 2px 2px 0 0; /* Rounded top corners */
+    border: 1px solid var(--accent-color); /* Border color using accent */
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease; /* Smooth transition */
+  }
+
+  body.dark-mode .accordion-header {
+    background-color: var(--bg-color); /* Ensure background is dark in dark mode */
+    color: var(--text-color); /* Text color in dark mode */
+    border: 1px solid rgba(203, 161, 53, 0.2); /* Light border in dark mode */
+  }
+
+  /* Light Mode — Accordion Header */
+body.light-mode .accordion-header {
+  background-color: #fff; /* White background in light mode */
+  color: var(--text-color); /* Text color in light mode */
+  border: 1px solid rgba(0, 33, 71, 0.2); /* Dark border in light mode */
+}
+  
   
   .card {
     background-color: rgba(203, 161, 53, 0.05);
     border: 1px solid var(--accent-color);
     transition: transform 0.3s ease;
   }
+
+  .accordion-button.collapsed{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+  }
+
+  .accordion-body .list-group-flush {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  .accordion-body .list-group-item{
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+  }
+
+  
   
   .card:hover {
     transform: translateY(-5px);
@@ -123,15 +187,50 @@
   }
   
   /* Accordion Styles */
-  .accordion-button {
-    color: var(--text-color);
-    background-color: rgba(203, 161, 53, 0.1);
-  }
+body.dark-mode .accordion-button {
+  color: var(--text-color);
+  background-color: rgba(7, 6, 2, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .accordion-button.collapsed {
   
-  .accordion-button:not(.collapsed) {
-    color: var(--accent-color);
-    background-color: rgba(203, 161, 53, 0.2);
-  }
+  border: 1px solid rgba(203, 161, 53, 0.2);
+}
+
+/* Light Mode Accordion */
+body.light-mode .accordion-button {
+  background-color: rgba(0, 33, 71, 0.05);
+}
+
+body.light-mode .accordion-button.collapsed {
+  background-color: rgba(0, 33, 71, 0.1);
+}
+
+body.light-mode .accordion-button:not(.collapsed) {
+  background-color: rgba(0, 33, 71, 0.1);
+}
+
+/* Dark Mode Accordion */
+body.dark-mode .accordion-button.collapsed {
+  background-color: rgba(203, 161, 53, 0.05); /* Subtle gold tint */
+}
+
+body.dark-mode .accordion-button.collapsed:hover {
+  background-color: rgba(203, 161, 53, 0.1);
+  color: var(--accent-color);
+}
+
+body:not(.light-mode) .accordion-button:not(.collapsed) {
+  background-color: rgba(203, 161, 53, 0.2);
+  color: var(--accent-color);
+}
+
+.accordion-button:not(.collapsed):hover {
+  background-color: rgba(203, 161, 53, 0.1);
+  color: var(--accent-color);
+}
+
   
   /* Profile Image */
   .profile-pic {
@@ -147,13 +246,9 @@
     background-color: rgba(0, 33, 71, 0.1);
   }
   
-  .light-mode .accordion-button {
-    background-color: rgba(0, 33, 71, 0.05);
-  }
+
   
-  .light-mode .accordion-button:not(.collapsed) {
-    background-color: rgba(0, 33, 71, 0.1);
-  }
+
   
   /* Responsive adjustments */
   @media (max-width: 768px) {
