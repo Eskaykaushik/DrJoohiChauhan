@@ -97,7 +97,8 @@ body.light-mode .accordion-header {
     width: 100%;          /* Ensures the image fits the card width */
     height: 200px;         /* Maintains the aspect ratio */
     border-radius: 10px;  /* Optional: rounds the corners of the image */
-    object-fit: cover;    /* Ensures the image covers the card area */
+    object-fit: cover; 
+    padding: 10px;   /* Ensures the image covers the card area */
   }
   
 
